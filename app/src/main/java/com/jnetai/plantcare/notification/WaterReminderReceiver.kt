@@ -8,7 +8,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import androidx.core.app.NotificationCompat
-import com.jnetai.plantcare.MainActivity
+import com.jnetai.plantcare.ui.MainActivity
 import com.jnetai.plantcare.R
 
 class WaterReminderReceiver : BroadcastReceiver() {
