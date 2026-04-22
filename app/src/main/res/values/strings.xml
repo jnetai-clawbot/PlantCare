@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PlantCare</string>
+
+    <!-- Navigation -->
+    <string name="nav_plants">My Plants</string>
+    <string name="nav_wishlist">Wishlist</string>
+    <string name="nav_seasonal">Seasonal</string>
+    <string name="nav_about">About</string>
+
+    <!-- Plant details -->
+    <string name="plant_name_hint">Plant name</string>
+    <string name="plant_species_hint">Species / Variety</string>
+    <string name="plant_location_hint">Location (e.g. Kitchen window)</string>
+    <string name="plant_date_planted">Date planted</string>
+    <string name="plant_watering_interval">Water every (days)</string>
+    <string name="plant_sunlight">Sunlight needs</string>
+    <string name="plant_notes">Notes</string>
+    <string name="plant_add_photo">Add photo</string>
+    <string name="plant_save">Save plant</string>
+    <string name="plant_delete">Delete plant</string>
+    <string name="plant_confirm_delete">Delete this plant? This cannot be undone.</string>
+
+    <!-- Sunlight levels -->
+    <string name="sunlight_full">Full sun</string>
+    <string name="sunlight_partial">Partial shade</string>
+    <string name="sunlight_shade">Full shade</string>
+    <string name="sunlight_indirect">Indirect light</string>
+
+    <!-- Health log -->
+    <string name="health_log_title">Health Log</string>
+    <string name="health_add_entry">Add entry</string>
+    <string name="health_note_hint">How is the plant doing?</string>
+    <string name="health_date">Date</string>
+
+    <!-- Wishlist -->
+    <string name="wishlist_add">Add to wishlist</string>
+    <string name="wishlist_name_hint">Plant name</string>
+    <string name="wishlist_notes_hint">Why do you want it?</string>
+    <string name="wishlist_move_to_collection">Move to my plants</string>
+
+    <!-- Seasonal -->
+    <string name="seasonal_title">Seasonal Reminders</string>
+    <string name="seasonal_spring">Spring Planting</string>
+    <string name="seasonal_summer">Summer Care</string>
+    <string name="seasonal_autumn">Autumn Prep</string>
+    <string name="seasonal_winter">Winter Protection</string>
+
+    <!-- Watering -->
+    <string name="watering_channel">Plant watering reminders</string>
+    <string name="watering_notification_title">Time to water!</string>
+    <string name="watering_notification_text">Your plant %s needs watering</string>
+    <string name="watered">Watered ✓</string>
+    <string name="last_watered">Last watered</string>
+    <string name="next_water">Next water</string>
+
+    <!-- Export -->
+    <string name="export_data">Export plant data</string>
+    <string name="export_success">Plant data exported</string>
+    <string name="export_error">Export failed</string>
+
+    <!-- About -->
+    <string name="about_title">About PlantCare</string>
+    <string name="about_version">Version %s</string>
+    <string name="about_check_updates">Check for Updates</string>
+    <string name="about_share">Share PlantCare</string>
+    <string name="about_share_text">Check out PlantCare - the smart plant care app! https://github.com/jnetai-clawbot/PlantCare</string>
+    <string name="about_update_available">Update available: v%s</string>
+    <string name="about_up_to_date">You\'re up to date!</string>
+    <string name="about_update_error">Could not check for updates</string>
+
+    <!-- General -->
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
+    <string name="no_plants">No plants yet. Tap + to add one!</string>
+    <string name="no_wishlist">Your wishlist is empty</string>
+    <string name="days">days</string>
+
+    <string-array name="sunlight_options">
+        <item>@string/sunlight_full</item>
+        <item>@string/sunlight_partial</item>
+        <item>@string/sunlight_shade</item>
+        <item>@string/sunlight_indirect</item>
+    </string-array>
+
+    <string-array name="season_months_spring">
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+    </string-array>
+    <string-array name="season_months_summer">
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+    </string-array>
+    <string-array name="season_months_autumn">
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+    </string-array>
+    <string-array name="season_months_winter">
+        <item>December</item>
+        <item>January</item>
+        <item>February</item>
+    </string-array>
+</resources>

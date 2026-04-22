@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_plants">
+
+    <fragment
+        android:id="@+id/nav_plants"
+        android:name="com.jnetai.plantcare.ui.screens.PlantListFragment"
+        android:label="@string/nav_plants" />
+
+    <fragment
+        android:id="@+id/nav_wishlist"
+        android:name="com.jnetai.plantcare.ui.screens.WishlistFragment"
+        android:label="@string/nav_wishlist" />
+
+    <fragment
+        android:id="@+id/nav_seasonal"
+        android:name="com.jnetai.plantcare.ui.screens.SeasonalFragment"
+        android:label="@string/nav_seasonal" />
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.jnetai.plantcare.ui.screens.AboutFragment"
+        android:label="@string/nav_about" />
+
+    <fragment
+        android:id="@+id/plantDetailFragment"
+        android:name="com.jnetai.plantcare.ui.screens.PlantDetailFragment"
+        android:label="Plant Detail">
+        <argument android:name="plantId" app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addEditPlantFragment"
+        android:name="com.jnetai.plantcare.ui.screens.AddEditPlantFragment"
+        android:label="Add Plant" />
+
+    <fragment
+        android:id="@+id/healthLogFragment"
+        android:name="com.jnetai.plantcare.ui.screens.HealthLogFragment"
+        android:label="@string/health_log_title">
+        <argument android:name="plantId" app:argType="long" />
+    </fragment>
+
+</navigation>
