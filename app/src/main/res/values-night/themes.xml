@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.PlantCare.Starting" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
-        <item name="windowSplashScreenBackground">@color/md_theme_dark_background</item>
-        <item name="postSplashScreenTheme">@style/Theme.PlantCare</item>
-    </style>
+    <!-- Night-specific theme overrides if needed -->
 </resources>
