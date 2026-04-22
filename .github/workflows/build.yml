@@ -37,13 +37,28 @@ jobs:
         run: ./gradlew assembleRelease
 
       - name: Rename APK
-        run: mv app/build/outputs/apk/release/app-release-unsigned.apk app/build/outputs/apk/release/PlantCare.apk || mv app/build/outputs/apk/release/app-release.apk app/build/outputs/apk/release/PlantCare.apk || true
+        run: |
+          if [ -f app/build/outputs/apk/release/app-release-unsigned.apk ]; then
+            mv app/build/outputs/apk/release/app-release-unsigned.apk app/build/outputs/apk/release/PlantCare.apk
+          elif [ -f app/build/outputs/apk/release/app-release.apk ]; then
+            mv app/build/outputs/apk/release/app-release.apk app/build/outputs/apk/release/PlantCare.apk
+          fi
 
-      - name: Get version from build.gradle
+      - name: Get version
         id: version
         run: |
-          VERSION=$(grep 'versionName' app/build.gradle.kts | head -1 | sed 's/.*versionName = "\(.*?)".*/\1/' | tr -d '"')
+          VERSION=$(grep 'versionName' app/build.gradle.kts | head -1 | sed 's/.*= *"*\([^"]*\)".*/\1/')
           echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Detected version: $VERSION"
+
+      - name: Delete old release if exists
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="v${{ steps.version.outputs.version }}"
+          gh release delete "$TAG" --yes || true
+          git tag -d "$TAG" || true
+          git push origin ":refs/tags/$TAG" || true
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
